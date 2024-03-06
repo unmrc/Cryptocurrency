@@ -1,0 +1,33 @@
+.section-offset-1 {
+	.crypto {
+		background: #ffffff;
+		width: 100%;
+		border-radius: 10px;
+		padding: 15px 10px;
+		box-shadow: 10px 10px 60px rgba(0, 0, 0, 0.1);
+		
+		&:hover {
+			opacity: .9;
+			position: relative;
+			z-index: 9999;
+		}
+		
+		img {
+			margin-right: 40px;
+		}
+	}
+	
+	@include media-breakpoint-between(xs, xs) {
+		.crypto-coins {
+			display: none;
+		}
+	}
+	
+	@include media-breakpoint-up(md) {
+		.crypto {
+			padding: 25px 40px;
+		}
+	}
+	
+}
+

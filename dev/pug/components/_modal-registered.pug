@@ -1,0 +1,31 @@
+// Modal booking
+#registered.modal.modal-book.fade.text-left(role='dialog')
+    .modal-dialog.modal-md.modal-dialog-centered
+        // Modal content
+        .modal-content
+            .modal-header
+                h4.modal-title.ml-3 Create Account
+                button.close(type='button', data-dismiss='modal'): span.icon.mdi.mdi-close
+            .modal-body
+                form.rd-mailform( data-form-output="form-output-global", data-form-type='forms', method='post', action='bat/rd-mailform.php' )
+                    .row.row-15.row-lg-30.align-items-center
+                        .col-12
+                            .form-group.mb-0
+                                .form-control-wrap
+                                    input.form-input( type='text', name='first-name', placeholder='First Name', data-constraints='@Required' )
+                        .col-12
+                            .form-group.mb-0
+                                .form-control-wrap
+                                    input.form-input( type='text', name='last-name', placeholder='Last Name', data-constraints='@Required' )
+                        .col-12
+                            .form-group.mb-0
+                                .form-control-wrap
+                                    input.form-input( type='email', name='email', placeholder='Email', data-constraints='@Email @Required' )
+                        .col-12
+                            .form-group.mb-0
+                                .form-control-wrap
+                                    input.form-input( type='password', name='password', placeholder='Password', data-constraints='@Required' )
+                        .col-12.mt-1.mt-lg-1
+                            .btn-group-1.text-left
+                                button.btn.btn-primary.btn-register( type='submit' ) Let's Get Started
+                                button.btn.btn-outline-primary.btn-register.mt-3.mt-sm-0.ml-0.ml-sm-3( type='button', data-dismiss='modal') Cancel

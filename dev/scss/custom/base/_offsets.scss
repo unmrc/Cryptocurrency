@@ -1,0 +1,123 @@
+/** @section Offsets */
+
+// Elements
+p {
+	* + & {
+		margin-top: 25px;
+	}
+}
+
+
+// Headings
+h1,
+.h1 {
+	* + & {
+		margin-top: 20px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 30px;
+		}
+	}
+}
+
+h2,
+.h2 {
+	* + & {
+		margin-top: 20px;
+	}
+
+	p + & {
+		margin-top: 12px;
+	}
+
+	& + p {
+		margin-top: 12px;
+	}
+	
+	& + h3,
+	& + .h3 {
+		margin-top: 32px;
+	}
+}
+
+h3,
+.h3 {
+	* + & {
+		margin-top: 30px;
+	}
+}
+
+h4,
+.h4 {}
+
+h5,
+.h5 {}
+
+h6,
+.h6 {}
+
+
+// Classes
+.btn {
+	* + & {
+		margin-top: 30px;
+		
+		@include media-breakpoint-up(xl) {
+			margin-top: 50px;
+		}
+	}
+}
+
+.btn-register {
+	width: 100%;
+}
+
+@include media-breakpoint-up(sm) {
+	.btn-register {
+		width: auto;
+	}
+}
+
+.text-primary {
+	color: $primary;
+}
+
+.subtitle{
+	width: 100%;
+	margin: 32px auto;
+}
+
+@include media-breakpoint-up(lg) {
+	.subtitle {
+		width: 50%;
+	}
+}
+
+.waypoint {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	
+	svg {
+		transition: all .5s ease;
+		&:hover {
+			transform: translateY(-10px);
+		}
+	}
+}
+
+
+// Grid
+.container {
+	* + & {
+		margin-top: 30px;
+	}
+}
+
+.row {
+	* + & {
+		margin-top: 50px;
+	}
+}

@@ -1,0 +1,23 @@
+// Modal booking
+#login.modal.modal-book.fade.text-left(role='dialog')
+    .modal-dialog.modal-dialog-centered
+        // Modal content
+        .modal-content
+            .modal-header
+                h4.modal-title.ml-3 Log in
+                button.close(type='button', data-dismiss='modal'): span.icon.mdi.mdi-close
+            .modal-body
+                form.rd-mailform( data-form-output="form-output-global", data-form-type='forms', method='post', action='bat/rd-mailform.php' )
+                    .row.row-lg-30.align-items-center
+                        .col-md-12
+                            .form-group
+                                .form-control-wrap
+                                    input.form-input( type='email', name='email', placeholder='Email', data-constraints='@Email @Required' )
+                        .col-md-12
+                            .form-group
+                                .form-control-wrap
+                                    input.form-input( type='password', name='password', placeholder='Password', data-constraints='@Required' )
+                        .col-12.mt-1.mt-lg-2
+                            .btn-group-1.text-left
+                                button.btn.btn-primary.w-100( type='submit' ) Let's Get Started
+                                button.btn.btn-outline-primary.mt-3.w-100( type='button', data-dismiss='modal') Cancel

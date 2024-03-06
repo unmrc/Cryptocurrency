@@ -1,0 +1,106 @@
+/** @section Footers */
+
+// Footer Classic
+.footer-classic {
+	padding: 60px 0;
+	background: $gray;
+	
+	.footer-phone {
+		font-size: 20px;
+		color: $primary;
+		font-weight: 700;
+		
+		&:hover {
+			opacity: .7;
+		}
+	}
+	
+	@include media-breakpoint-up(xl) {
+		.footer-phone {
+			font-size: 28px;
+		}
+	}
+	
+	.footer-list-icon {
+	display: block;
+		
+		li {
+			display: inline-block;
+		}
+		
+		.icon {
+			font-size: 24px;
+			color: $gray-500;
+			
+		}
+		.mdi-youtube-play:hover {
+			color: red;
+		}
+		
+		.mdi-facebook:hover {
+			color: #2879fe;
+		}
+		
+		.mdi-instagram:hover {
+			color: #de7272;
+		}
+		
+		.mdi-twitter:hover {
+			color: #81cbdb;
+		}
+		
+		.mdi-linkedin:hover {
+			color: #2879fe;
+		}
+	}
+	
+	.footer-street {
+		font-size: 20px;
+		color: $gray-500;
+	}
+	
+	@include media-breakpoint-up(lg) {
+		.footer-street {
+			width: 120%;
+		}
+	}
+	
+	.list-footer {
+		font-size: 18px;
+		
+		a {
+			color: $gray-800;
+			font-weight: 700;
+			
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	section.footer-classic {
+		&:first-of-type {
+			padding-top: 40px;
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.footer-classic {
+		padding: 90px 0;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.footer-classic {
+		padding: 100px 0;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.footer-classic {
+		padding: 150px 0;
+	}
+}

@@ -1,0 +1,188 @@
+/** @section Utilities custom-styles */
+
+
+.height-fill {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+
+	> * {
+		flex-grow: 1;
+		flex-shrink: 0;
+	}
+}
+
+
+// Object inline 
+.object-inline {
+	white-space: nowrap;
+	> * {
+		display: inline-block;
+		min-width: 20px;
+		vertical-align: top;
+		white-space: normal;
+	}
+
+	> * + * {
+		margin-left: 5px;
+	}
+}
+
+.oh {
+	position: relative;
+	overflow: hidden;
+}
+
+
+// Text decorations
+.text-decoration-lines {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+
+	&-content {
+		position: relative;
+		display: inline-block;
+		min-width: 170px;
+		font-size: 13px;
+		text-transform: uppercase;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			height: 1px;
+			background: $gray-200;
+			top: 50%;
+			width: 100vw;
+		}
+
+		&::before {
+			left: 0;
+			transform: translate3d(-100%, 0, 0);
+		}
+
+		&::after {
+			right: 0;
+			transform: translate3d(100%, 0, 0);
+		}
+	}
+}
+
+* + .text-decoration-lines {
+	margin-top: 30px;
+}
+
+
+// Rights
+p.rights {
+	font-size: 18px;
+	color: $gray-800;
+	font-weight: 700;
+	margin-top: 100px;
+	a {
+		color: inherit;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+
+
+// JSColor Workaround
+[style*='z-index: 1000;'] {
+	z-index: $zindex-layout-panel + 1 !important;
+}
+
+.text-block {
+	> * {
+		margin-left: .125em;
+		margin-right: .125em;
+	}
+}
+
+// BTC to USD
+//.btc-to-usd {
+//	position: relative;
+//	min-width: 100px;
+//
+//	> * + * { margin-top: 2px; }
+//}
+//
+//.btc-to-usd__title {
+//	letter-spacing: .075em;
+//}
+//
+//.btc-price {
+//	position: relative;
+//	display: inline-block;
+//	color: $gray-800;
+//	white-space: nowrap;
+//
+//	.btcwdgt {
+//		min-width: 120px !important;
+//		.btcwdgt-footer,
+//		.btcwdgt-edge {
+//			display: none !important;
+//		}
+//
+//		.btcwdgt-body {
+//			padding: 0 0 0 0 !important;
+//			margin: 0 !important;
+//			height: auto !important;
+//		}
+//
+//		.btcwdgt-body ul {
+//			overflow: hidden !important;
+//			margin: 0 !important;
+//			font-size: 16px !important;
+//			height: 1em !important;
+//		}
+//
+//		.btcwdgt-body ul li {
+//			font-family: $font-family-base !important;
+//			font-size: 16px !important;
+//			font-weight: 700 !important;
+//			min-height: 1.3em;
+//			line-height: 1.2em !important;
+//		}
+//
+//		.btcwdgt-body span {
+//			display: none !important;
+//		}
+//
+//		&.btcwdgt-s-price {
+//			.arrow {
+//				position: static !important;
+//				display: inline-block !important;
+//				margin: 0 0 0 5px !important;
+//
+//				&:not(.up):not(.down) {
+//					opacity: 0 !important;
+//				}
+//
+//				&.up {
+//					border-bottom-color: $success-color !important;
+//				}
+//
+//				&.down {
+//					border-top-color: $danger-color !important;
+//				}
+//			}
+//		}
+//
+//		ul li {
+//			&::before {
+//				content: '\0024';
+//			}
+//		}
+//	}
+//
+//	.btcwdgt-text-ticker.btcwdgt-light {
+//		background-color: transparent !important;
+//		box-shadow: none !important;
+//		margin: 0 !important;
+//	}
+//}
